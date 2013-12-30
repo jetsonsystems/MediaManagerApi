@@ -30,7 +30,7 @@ var server = null;
 
 function startServer(serverPort, config, callback) {
 
-  var mmApi = require('./lib/MediaManagerApiCore')(config);
+  var mmApi = require('./lib/MediaManagerApiCore')(config, { singleton: false });
 
   var bunyan = require('bunyan');
   var logger = bunyan.createLogger({

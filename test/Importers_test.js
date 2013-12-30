@@ -13,7 +13,18 @@ console.log('Importerts_test: config - ' + util.inspect(config));
 
 var dbMan = require('./databaseManager.js');
 var mmStorage = require('MediaManagerStorage')(config.db);
-var imageService = require('ImageService');
+var imageService = require('ImageService')(
+  {
+    db: {
+      host: config.db.local.host,
+      port: config.db.local.port,
+      name: config.db.database
+    }
+  },
+  {
+    checkConfig: false
+  }
+);
 var Importers = require('../lib/MediaManagerApiCore')(config, {singleton: false}).Importers;
 var WebSocket = require('../lib/NotificationsWsLike');
 ;
@@ -35,10 +46,6 @@ log4js.configure('./test/log4js.json');
 describe('Importers Resource', function () {
   // set a high time-out because it may take a while to run the import
   this.timeout(180000);  // 3 minutes
-
-  imageService.config.db.host = "localhost";
-  imageService.config.db.port = 5984;
-  var server = nano('http://' + imageService.config.db.host + ':' + imageService.config.db.port);
 
   var db_name = imageService.config.db.name = 'plm-media-manager-dev0';
 

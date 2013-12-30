@@ -3,7 +3,19 @@
 var async = require('async')
   , restify = require('restify')
   , config = require('./config')
-  , imageService = require('ImageService')
+  , mmStorage = require('MediaManagerStorage')(config.db)
+  , imageService = require('ImageService')(
+    {
+      db: {
+        host: config.db.local.host,
+        port: config.db.local.port,
+        name: config.db.database
+      }
+    },
+    {
+      checkConfig: false
+    }
+  )
   , testDataManager = require('./TestDataManager')
   , media_manager_api_server = require("../media_manager_api_server")
   , chai = require('chai')
@@ -538,7 +550,7 @@ describe('service: MediaManagerApi', function () {
         var removeTagsCommand = {
           "remove":{
             "images":imagesOidsWith$
-            ,"tagsToRemove":["family", "friends"]
+            ,"tags":["family", "friends"]
           }
         };
 

@@ -3,7 +3,18 @@
 var async = require('async')
   , restify = require('restify')
   , config = require('./config')
-  , imageService = require('ImageService')
+  , imageService = require('ImageService')(
+    {
+      db: {
+        host: config.db.local.host,
+        port: config.db.local.port,
+        name: config.db.database
+      }
+    },
+    {
+      checkConfig: false
+    }
+  )
   , testDataManager = require('./TestDataManager')
   , media_manager_api_server = require("../media_manager_api_server")
   , chai = require('chai')
@@ -24,11 +35,6 @@ var dbOptions = {
   dbName: config.db.database,
   dbType: config.db.local.type // couchdb | touchdb
 };
-
-
-imageService.config.db.host = dbOptions.host;
-imageService.config.db.port = dbOptions.port;
-imageService.config.db.name = dbOptions.dbName;
 
 
 testDataManager.setDBOptions(dbOptions);

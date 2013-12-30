@@ -19,7 +19,8 @@ var config = {
   }
 };
 
-var mmApi = require('../lib/MediaManagerApiCore')(config, { singleton: false });
+var mmStorage = require('MediaManagerStorage')(config.db);
+var mmApi = require('../lib/MediaManagerApiCore')(config, { singleton: false} );
 
 var syncResource = null;
 

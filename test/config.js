@@ -5,7 +5,8 @@ module.exports = {
     database: "plm-media-manager-dev0",
     local: {
       host: "localhost",
-      port: 5984
+      port: 5984,
+      type: 'couchdb'
     }
   }
 };
