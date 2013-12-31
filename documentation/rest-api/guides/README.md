@@ -2,4 +2,4 @@
 
 ## Contents
 
-  * [Pagination](./guides/pagination.md)
+  * [Pagination](./pagination.md)
