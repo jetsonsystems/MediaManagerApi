@@ -1,7 +1,7 @@
 {
   "name": "MediaManagerApi",
   "description": "Media Manager API",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Marek J. Ryniejski <marek@jetsonsys.com>",
   "bin": {
     "media_manager_api_server": "media_manager_api_server.js"
@@ -22,7 +22,7 @@
     ,"postal"       : "~0.7"
     ,"async"        : "~0.1.22"
     ,"MediaManagerStorage" : "https://github.com/jetsonsystems/MediaManagerStorage/tarball/master#v0.1.0"
-    ,"ImageService" : "https://github.com/jetsonsystems/ImageService/tarball/master#v0.1.0"
+    ,"ImageService" : "https://github.com/jetsonsystems/ImageService/tarball/master#v0.1.1"
   },
   "devDependencies": {
     "async"  : "~0.1.22"

@@ -33,7 +33,7 @@ Creates a new image *importer* which triggers import of files in the PLM Media M
 
 ### Response Payload
 
-The response payload will contain a *importer* attribute which is a JSON representation of *importer* resource as described here: [[RestApi#Importer-Resource-Format|Importer Resource Format]].
+The response payload will contain a *importer* attribute which is a JSON representation of *importer* resource as described here: [Importer Resource Format](../resource-formats.md#importer-resource-format).
 
 ### Examples
 

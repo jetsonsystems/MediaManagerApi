@@ -20,6 +20,7 @@ Returns a list of image resources. Each image resource is represented in its [Im
 ### Parameters
 
   * **n=\<integer\>**: The number of images to return. If n is NOT provided, **all** images are returned. Note, this paramater ONLY applies when [pagination](./guides/pagination.md) is not enabled.
+  * **ids=\<comma separate list of image ids\>**: Retrieve the specific images as identified by the supplied IDs. The **ids** parameter cannot be specified with any other parameter. Also, the **id** paramater ONLY applies when [pagination](./guides/pagination.md) is not enabled.
   * **trashState=out|any|in**: Indicates whether to return (i) images out of trash, or (ii) all regardless of trash state, or (iii) in trash, respectively.  Defaults to trashState=out when parameter is omitted.  In other words, by default hide images that have been placed in trash.
   * filtering images by **tags**:
 
