@@ -22,7 +22,7 @@
     ,"postal"       : "~0.7"
     ,"async"        : "~0.1.22"
     ,"MediaManagerStorage" : "https://github.com/jetsonsystems/MediaManagerStorage/tarball/master#v0.1.1"
-    ,"ImageService" : "https://github.com/jetsonsystems/ImageService/tarball/master#v0.1.1"
+    ,"ImageService" : "https://github.com/jetsonsystems/ImageService/tarball/master#v0.1.2"
   },
   "devDependencies": {
     "async"  : "~0.1.22"
