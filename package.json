@@ -21,7 +21,7 @@
     ,"underscore"   : "~1.4.2"
     ,"postal"       : "~0.7"
     ,"async"        : "~0.1.22"
-    ,"MediaManagerStorage" : "https://github.com/jetsonsystems/MediaManagerStorage/tarball/master#v0.1.4"
+    ,"MediaManagerStorage" : "https://github.com/jetsonsystems/MediaManagerStorage/tarball/master#v0.1.5"
     ,"ImageService" : "https://github.com/jetsonsystems/ImageService/tarball/master#v0.1.5"
   },
   "devDependencies": {
